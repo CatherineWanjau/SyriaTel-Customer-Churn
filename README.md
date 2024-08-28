@@ -114,6 +114,9 @@ plt.ylabel('True Label')
 plt.title('Confusion Matrix')
 plt.show() 
 
+![confusion matrix output](https://github.com/user-attachments/assets/81437252-8a6c-40b9-a64b-e4698ae1984e)
+
+
 2. Classification report
 
 from sklearn.metrics import classification_report
@@ -174,6 +177,9 @@ plt.legend(loc='lower right')
 print('Training AUC: {}'.format(auc(train_fpr, train_tpr)))
 plt.show()
 
+![ROC curve training setoutput](https://github.com/user-attachments/assets/c7cabe24-58ea-45e4-9847-9807abb8a0eb)
+
+
 
 The score of 0.8037 indicates that the model can distinguish between churn and non-churn customers during training.  this means there is approximately an 80.37% chance that the model will rank a randomly chosen positive instance(churn) higher than a randomly chosen negative instance(non-churn).
 
@@ -194,6 +200,9 @@ plt.legend(loc='lower right')
 print('Test AUC: {}'.format(auc(test_fpr, test_tpr)))
 print('')
 plt.show()
+
+![ROC test setoutput](https://github.com/user-attachments/assets/15767c87-18b5-4d11-9a7c-e3b2a63a256d)
+
 
 
 The score of 0.7819 reflects the model's performance on unseen data. it is slightly lower than the training AUC but still indicates good performance.
@@ -252,6 +261,9 @@ plt.barh(coef_df['Feature'], coef_df['Coefficient'], color=['green' if x < 0 els
 plt.xlabel('Coefficient Value')
 plt.title('Feature Importance for Churn Prediction (Logistic Regression)')
 plt.show()
+
+![Features importance output](https://github.com/user-attachments/assets/4c1940f8-5d17-42af-955d-bd47f3c819e4)
+
 
 The coefficients from the model tell us the direction and magnitude of each coefficient feature's influence on the probability of churn
 
